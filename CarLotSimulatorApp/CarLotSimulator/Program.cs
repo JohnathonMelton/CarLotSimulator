@@ -6,6 +6,74 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
+            CarLot lot = new CarLot();
+
+            Car tundra = new Car();
+            lot.CarList.Add(tundra);
+
+            tundra.Year = 2022;
+            tundra.Make = "Toyota";
+            tundra.Model = "Tundra";
+            tundra.EngineNoise = "The Tundra has a satisfying engine sound if you like trucks.";
+            tundra.HonkNoise = "The honk on the Tundra is loud and obvious.";
+
+            tundra.MakeEngineNoise();
+            tundra.MakeHonkNoise();
+
+            Console.WriteLine();
+            Console.WriteLine("____________________");
+            Console.WriteLine();
+
+            Car mustang = new Car();
+            lot.CarList.Add(mustang);
+
+            mustang.Year = 2011;
+            mustang.Make = "Ford";
+            mustang.Model = "GT";
+            mustang.EngineNoise = "The engine noise is impressive on the GT.";
+            mustang.HonkNoise = "The honk of a mustang is ehh to be honest.";
+
+            mustang.MakeEngineNoise();
+            mustang.MakeHonkNoise();
+
+            Console.WriteLine();
+            Console.WriteLine("____________________");
+            Console.WriteLine();
+
+            Car focus = new Car();
+            focus.Year = 2023;
+            focus.Make = "Ford";
+            focus.Model = "Focus";
+            focus.EngineNoise = "The engine noise on a focus is pretty much nonexistant.";
+            focus.HonkNoise = "The honk of a Focus is absolutely embarrassing. Dont use it if you can help it.";
+
+            focus.MakeEngineNoise();
+            focus.MakeHonkNoise();
+
+            Console.WriteLine();
+            Console.WriteLine("____________________");
+            Console.WriteLine();
+
+            foreach(var car in lot.CarList)
+            {
+                Console.WriteLine($"Year: {car.Year} | Make: {car.Make} | Model: {car.Model}");
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             //TODO
 
             //Create a seperate class file called Car
