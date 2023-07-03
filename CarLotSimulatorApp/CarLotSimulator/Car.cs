@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CarLotSimulator
 {
-    internal class Car
+    public class Car
     {
+        public Car()
+        {
+            CarLot.numberOfCars++;
+        }
         public int Year { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
@@ -15,11 +19,6 @@ namespace CarLotSimulator
         public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
 
-
-        public Car()
-        {
-
-        }
 
         public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
         {

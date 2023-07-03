@@ -16,9 +16,9 @@ namespace CarLotSimulator
             tundra.Model = "Tundra";
             tundra.EngineNoise = "The Tundra has a satisfying engine sound if you like trucks.";
             tundra.HonkNoise = "The honk on the Tundra is loud and obvious.";
-
             tundra.MakeEngineNoise();
             tundra.MakeHonkNoise();
+            Console.WriteLine($"The number of cars in the lot is: {CarLot.numberOfCars}");
 
             Console.WriteLine();
             Console.WriteLine("____________________");
@@ -32,23 +32,25 @@ namespace CarLotSimulator
             mustang.Model = "GT";
             mustang.EngineNoise = "The engine noise is impressive on the GT.";
             mustang.HonkNoise = "The honk of a mustang is ehh to be honest.";
-
             mustang.MakeEngineNoise();
             mustang.MakeHonkNoise();
+            Console.WriteLine($"The number of cars in the lot is: {CarLot.numberOfCars}");
 
             Console.WriteLine();
             Console.WriteLine("____________________");
             Console.WriteLine();
 
             Car focus = new Car();
+            lot.CarList.Add(focus);
+
             focus.Year = 2023;
             focus.Make = "Ford";
             focus.Model = "Focus";
             focus.EngineNoise = "The engine noise on a focus is pretty much nonexistant.";
             focus.HonkNoise = "The honk of a Focus is absolutely embarrassing. Dont use it if you can help it.";
-
             focus.MakeEngineNoise();
             focus.MakeHonkNoise();
+            Console.WriteLine($"The number of cars in the lot is: {CarLot.numberOfCars}");
 
             Console.WriteLine();
             Console.WriteLine("____________________");
@@ -58,6 +60,11 @@ namespace CarLotSimulator
             {
                 Console.WriteLine($"Year: {car.Year} | Make: {car.Make} | Model: {car.Model}");
             }
+
+            Console.WriteLine();
+            Console.WriteLine("____________________");
+            Console.WriteLine();
+            Console.WriteLine($"The total number of cars in the lot is: {CarLot.numberOfCars}");
 
 
 
